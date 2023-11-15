@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Happy Pet</title>
+  <link rel="preload" href="fonts/Montserrat.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container header__container">
+    <a href="#" class="header__logo">
+      <img src="img/logo.svg" alt="Логотип">
+    </a>
+    <nav class="nav" title="Наигация" data-menu>
+      <ul class="list-reset nav__list">
+        <li class="nav__item"><a href="#hero" class="nav__link active" data-menu-item data-scroll>Главная</a></li>
+        <li class="nav__item"><a href="#friends" class="nav__link" data-menu-item data-scroll>Друзья</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link" data-menu-item data-scroll>О сервисе</a></li>
+        <li class="nav__item"><a href="#footer" class="nav__link" data-menu-item data-scroll>Контакты</a></li>
+      </ul>
+      <button class="btn-reset burger-close" aria-label="Закрыть" data-menu-close></button>
+    </nav>
+    <div class="header__contact">
+      <div class="header__contact--tell">
+        <a class="header__contact--tell__link" href="tel:+79686582376">+7 968 658-23-76</a>
+      </div>
+      <div class="header__contact basket basket--active" tabindex="0">
+        <div class="basket__block"></div>
+        <span class="basket__price">0 р.</span>
+        <div class="basket-content">
+          <div class="simplebar" data-simplebar>
+            <ul class="basket-content__list list-reset">
+              <!-- <li class="basket-content__item">
+                <article class="basket-content__product basket-product">
+                  <img class="basket-product__img" src="img/dog.png" alt="Собака">
+                  <div class="basket-product__text">
+                    <h3 class="basket-product__title">Собака</h3>
+                    <span class="basket-product__price">5 900 р.</span>
+                  </div>
+                  <button class="basket-product__delite btn-reset" aria-label="Удалить"></button>
+                </article>
+              </li> -->
+            </ul>
+          </div>
+          <div class="basket-content__bottom">
+            <div class="basket-content__fullprice">
+              <span>Итого:</span>
+              <span class="fullprice">0 р.</span>
+            </div>
+            <button class="basket-content__btn btn-reset btn--active">Перейти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero" id="hero">
+  <div class="container hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Твой новый друг с доставкой на дом
+        <span class="hero__title-text">Онлайн-магазин домашних животных подарит тебе нового друга в несколько
+          кликов. Действуй!</span>
+      </h1>
+      <a href="#friends" class="hero__link btn btn--active btn__shadow" data-scroll>Посмотреть друзей</a>
+    </div>
+    <div class="hero__image">
+      <picture>
+        <source srcset="img/hero-animal.avif" type="image/avif">
+        <source srcset="img/hero-animal.webp" type="image/webp">
+        <img loading="lazy" src="img/hero-animal.png" class="image" width="1027" height="1318" alt="Животные">
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <section class="friends" id="friends">
+  <div class="container">
+    <div class="friends-swiper-slider">
+      <div class="swiper friends__slider">
+        <div class="swiper-wrapper friends__wrapper">
+          <div class="swiper-slide friends__slide">
+            <div class="friends__subtitle">
+              <a href="#" class="friends__link friends__link--dog">Собаки</a>
+              <img src="img/mini-arrow.svg" alt="Стрелка">
+            </div>
+            <picture>
+              <source srcset="img/dog.avif" type="image/avif">
+              <source srcset="img/dog.webp" type="image/webp">
+              <img loading="lazy" src="img/dog.png" class="image" width="147" height="125" alt="Собакф">
+            </picture>
+          </div>
+          <div class="swiper-slide friends__slide">
+            <div class="friends__subtitle">
+              <a href="#" class="friends__link friends__link--parrot">Птицы</a>
+              <img src="img/mini-arrow.svg" alt="Стрелка">
+            </div>
+            <picture>
+              <source srcset="img/parrot.avif" type="image/avif">
+              <source srcset="img/parrot.webp" type="image/webp">
+              <img loading="lazy" src="img/parrot.png" class="image" width="147" height="125" alt="Птица">
+            </picture>
+          </div>
+          <div class="swiper-slide friends__slide">
+            <div class="friends__subtitle">
+              <a href="#" class="friends__link friends__link--cat">Кот</a>
+              <img src="img/mini-arrow.svg" alt="Стрелка">
+            </div>
+            <picture>
+              <source srcset="img/cat.avif" type="image/avif">
+              <source srcset="img/cat.webp" type="image/webp">
+              <img loading="lazy" src="img/cat.png" class="image" width="147" height="125" alt="Кот">
+            </picture>
+          </div>
+          <div class="swiper-slide friends__slide">
+            <div class="friends__subtitle">
+              <a href="#" class="friends__link friends__link--jocko">Обезьяна</a>
+              <img src="img/mini-arrow.svg" alt="Стрелка">
+            </div>
+            <picture>
+              <source srcset="img/jocko.avif" type="image/avif">
+              <source srcset="img/jocko.webp" type="image/webp">
+              <img loading="lazy" src="img/jocko.png" class="image" width="147" height="125" alt="Обезьяна">
+            </picture>
+          </div>
+        </div>
+
+        <div class="friends__scroll">
+          <div class="swiper-scrollbar-drag"></div>
+        </div>
+
+      </div>
+      <div class="friends__btns">
+        <button class="btn-reset swiper-friends-prev ellipse" aria-label="Перейти к предыдущему слайду">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="btn-reset swiper-friends-next ellipse" aria-label="Перейти к следующему слайду">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <h2 class="friends__title title">Почему выбирают наших друзей</h2>
+
+    <div class="friends__list">
+      <div class="friends__item">
+        <div class="friends__image">
+          <picture>
+            <source srcset="img/friends-1.avif" type="image/avif">
+            <source srcset="img/friends-1.webp" type="image/webp">
+            <img loading="lazy" src="img/friends-1.png" class="image" width="92" height="92" alt="Картинка">
+          </picture>
+        </div>
+        <div class="friends__content">
+          <div class="friends__content--subtitle">Их много</div>
+          <div class="friends__content--descr">Огромный выбор животных, птиц и питомцев</div>
+        </div>
+      </div>
+      <div class="friends__item">
+        <div class="friends__image">
+          <picture>
+            <source srcset="img/friends-2.avif" type="image/avif">
+            <source srcset="img/friends-2.webp" type="image/webp">
+            <img loading="lazy" src="img/friends-2.png" class="image" width="92" height="92" alt="Картинка">
+          </picture>
+        </div>
+        <div class="friends__content">
+          <div class="friends__content--subtitle">Они здоровы</div>
+          <div class="friends__content--descr">Мы заботимся о каждом питомце, который с нами</div>
+        </div>
+      </div>
+      <div class="friends__item">
+        <div class="friends__image">
+          <picture>
+            <source srcset="img/friends-3.avif" type="image/avif">
+            <source srcset="img/friends-3.webp" type="image/webp">
+            <img loading="lazy" src="img/friends-3.png" class="image" width="92" height="92" alt="Картинка">
+          </picture>
+        </div>
+        <div class="friends__content">
+          <div class="friends__content--subtitle">Их любят</div>
+          <div class="friends__content--descr">Мы окружаем любовью и вниманием наших друзей</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="catalog" id="catalog">
+  <div class="container">
+    <h2 class="catalog__title title">Каталог животных</h2>
+
+    <div class="catalog__up">
+      <ul class=" list-reset catalog__list">
+        <li class="catalog__item"><button class="btn-reset catalog__btn btn--active" type="button"
+            data-path="all">Все</button></li>
+        <li class="catalog__item"><button class="btn-reset catalog__btn" type="button" data-path="dog">Собаки</button>
+        </li>
+        <li class="catalog__item"><button class="btn-reset catalog__btn" type="button" data-path="cat">Кошки</button>
+        </li>
+        <li class="catalog__item"><button class="btn-reset catalog__btn" type="button" data-path="bird">Птицы</button>
+        </li>
+        <li class="catalog__item"><button class="btn-reset catalog__btn" type="button"
+            data-path="hamster">Хомяки</button>
+        </li>
+        <li class="catalog__item"><button class="btn-reset catalog__btn" type="button"
+            data-path="jocko">Обезьяны</button>
+        </li>
+      </ul>
+
+      <div class="catalog__bottom">
+        <div class="catalog__card swiper">
+          <ul class="catalog__bottom-list list-reset swiper-wrapper">
+            <li class="catalog__bottom-item card--visible swiper-slide">
+              <article class="card" data-target="dog">
+                <div class="card__info">
+                  <div class="card__info-month name">
+                    <span class="circle">4</span>
+                    месяца
+                  </div>
+                  <div class="card__info-revard name">
+                    <span class="circle">2</span>
+                    награды
+                  </div>
+                  <img src="img/tray.svg" alt="">
+                </div>
+                <div class="card__img">
+                  <img src="img/dog-1.png" alt="">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title">Доберман</h3>
+                  <p class="card__descr">Отличный новый друг для всей семьи, охраняет и обожает</p>
+                  <div class="card__description--nomination">
+                    <span class="dot saffron">собака</span>
+                    <span class="dot heliotrope">хищник</span>
+                  </div>
+                </div>
+                <div class="card__boxprice">
+                  <div class="card__price">5 900 р.</div>
+                  <button class="btn-reset card__button" type="button">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#paw"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__bottom-item card--visible swiper-slide">
+              <article class="card" data-target="cat">
+                <div class="card__info">
+                  <div class="card__info-month name">
+                    <span class="circle">7</span>
+                    месяца
+                  </div>
+                  <div class="card__info-revard name">
+                    <span class="circle">3</span>
+                    награды
+                  </div>
+                  <img src="img/tray.svg" alt="">
+                </div>
+                <div class="card__img">
+                  <img src="img/cat.png" alt="">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title">Вислоухая кошка</h3>
+                  <p class="card__descr">Прекрасная подруга на дождливые холодные времена</p>
+                  <div class="card__description--nomination">
+                    <span class="dot saffron">кошка</span>
+                    <span class="dot heliotrope">мышкоедная</span>
+                  </div>
+                </div>
+                <div class="card__boxprice">
+                  <div class="card__price">7 200 р.</div>
+                  <button class="btn-reset card__button" type="button">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#paw"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__bottom-item card--visible swiper-slide">
+              <article class="card" data-target="jocko">
+                <div class="card__info">
+                  <div class="card__info-month name">
+                    <span class="circle">7</span>
+                    месяца
+                  </div>
+                  <div class="card__info-revard name">
+                    <span class="circle">3</span>
+                    награды
+                  </div>
+                  <img src="img/tray.svg" alt="">
+                </div>
+                <div class="card__img">
+                  <img src="img/jocko.png" alt="">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title">Шимпанзе</h3>
+                  <p class="card__descr">Домашний питомец для тех, кто не хочет скучать</p>
+                  <div class="card__description--nomination">
+                    <span class="dot saffron">обезьяна</span>
+                    <span class="dot heliotrope">травоядная</span>
+                  </div>
+                </div>
+                <div class="card__boxprice">
+                  <div class="card__price">12 500 р.</div>
+                  <button class="btn-reset card__button" type="button">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#paw"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__bottom-item card--visible swiper-slide">
+              <article class="card" data-target="cat">
+                <div class="card__info">
+                  <div class="card__info-month name">
+                    <span class="circle">7</span>
+                    месяца
+                  </div>
+                  <div class="card__info-revard name">
+                    <span class="circle">3</span>
+                    награды
+                  </div>
+                  <img src="img/tray.svg" alt="">
+                </div>
+                <div class="card__img">
+                  <img src="img/cat.png" alt="">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title">Вислоухая кошка</h3>
+                  <p class="card__descr">Прекрасная подруга на дождливые холодные времена</p>
+                  <div class="card__description--nomination">
+                    <span class="dot saffron">кошка</span>
+                    <span class="dot heliotrope">мышкоедная</span>
+                  </div>
+                </div>
+                <div class="card__boxprice">
+                  <div class="card__price">7 200 р.</div>
+                  <button class="btn-reset card__button" type="button">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#paw"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__bottom-item card--visible swiper-slide">
+              <article class="card" data-target="dog">
+                <div class="card__info">
+                  <div class="card__info-month name">
+                    <span class="circle">4</span>
+                    месяца
+                  </div>
+                  <div class="card__info-revard name">
+                    <span class="circle">2</span>
+                    награды
+                  </div>
+                  <img src="img/tray.svg" alt="">
+                </div>
+                <div class="card__img">
+                  <img src="img/dog-1.png" alt="">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title">Доберман</h3>
+                  <p class="card__descr">Отличный новый друг для всей семьи, охраняет и обожает</p>
+                  <div class="card__description--nomination">
+                    <span class="dot saffron">собака</span>
+                    <span class="dot heliotrope">хищник</span>
+                  </div>
+                </div>
+                <div class="card__boxprice">
+                  <div class="card__price">5 900 р.</div>
+                  <button class="btn-reset card__button" type="button">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#paw"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination catalog-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="catalog__btns">
+          <button class="btn-reset swiper-catalog-prev ellipse" aria-label="Перейти к предыдущему слайду">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="btn-reset swiper-catalog-next ellipse" aria-label="Перейти к следующему слайду">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+      <section class="about" id="about">
+  <div class="container">
+    <div class="about__one">
+      <h2 class="about__title title">Мы любим поиграть</h2>
+
+      <div class="about__picture">
+        <div class="about__image picture-1">
+          <picture>
+            <source srcset="img/about-1.avif" type="image/avif">
+            <source srcset="img/about-1.webp" type="image/webp">
+            <img loading="lazy" src="img/about-1.png" class="image" width="370" height="189" alt="Картинка">
+          </picture>
+        </div>
+        <div class="about__image picture-2">
+          <picture>
+            <source srcset="img/about-2.avif" type="image/avif">
+            <source srcset="img/about-2.webp" type="image/webp">
+            <img loading="lazy" src="img/about-2.png" class="image" width="370" height="381" alt="Картинка">
+          </picture>
+        </div>
+        <div class="about__image picture-3">
+          <picture>
+            <source srcset="img/about-3.avif" type="image/avif">
+            <source srcset="img/about-3.webp" type="image/webp">
+            <img loading="lazy" src="img/about-3.png" class="image" width="370" height="254" alt="Картинка">
+          </picture>
+        </div>
+        <div class="about__image picture-4">
+          <picture>
+            <source srcset="img/about-4.avif" type="image/avif">
+            <source srcset="img/about-4.webp" type="image/webp">
+            <img loading="lazy" src="img/about-4.png" class="image" width="370" height="377" alt="Картинка">
+          </picture>
+        </div>
+        <div class="about__image picture-5">
+          <picture>
+            <source srcset="img/about-5.avif" type="image/avif">
+            <source srcset="img/about-5.webp" type="image/webp">
+            <img loading="lazy" src="img/about-5.png" class="image" width="370" height="185" alt="Картинка">
+          </picture>
+        </div>
+        <div class="about__image picture-6">
+          <picture>
+            <source srcset="img/about-6.avif" type="image/avif">
+            <source srcset="img/about-6.webp" type="image/webp">
+            <img loading="lazy" src="img/about-6.png" class="image" width="370" height="304" alt="Картинка">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="about__two">
+      <h2 class="about__title title">О питомнике Happy pet</h2>
+
+      <div class="about__box">
+        <div class="about__left">
+          <h3 class="about__subtitle">Мы — команда мечтателей</h3>
+          <div class="about__text">
+            <p>Нашей главной специализацией является производство клематисов. В нашей коллекции имеется более 450 видов
+              и сортов клематиса, но для коммерческих целей мы производим только немногим более 280 экземпляров
+              клематиса Ломоноса — клематисы с большим и маленьким цветком, а также стелющиеся формы клематиса в широком
+              диапазоне.
+            </p>
+            <p>
+              У нас также есть дополнительная специальность вьющиеся растения которые могут расти в саду в польских
+              климатических условиях; мы производим более сотни видов и сортов таких растений.
+            </p>
+          </div>
+          <a href="#" class="about__link">Читать больше </a>
+        </div>
+        <div class="about__rigth">
+          <picture>
+            <source srcset="img/about-7.avif" type="image/avif">
+            <source srcset="img/about-7.webp" type="image/webp">
+            <img loading="lazy" src="img/about-7.png" class="image" width="670" height="521" alt="Картинка">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer" id="footer">
+  <div class="container footer__container">
+    <h2 class="footer__title title">Есть вопросы? Задавайте!</h2>
+    <form action="#" class="form" method="POST" enctype="multipart/form-data">
+      <label class="form__label footer__label">
+        <input type="text" name="Имя" class="input-name input-reset form__input" placeholder="Введите Имя">
+      </label>
+      <label class="form__label footer__label">
+        <input type="email" name="email" class="input-email input-reset form__input" placeholder="Введите E-mail">
+      </label>
+      <label class="form__label footer__label">
+        <input type="tel" name="tel" class="input-tel input-reset form__input" placeholder="Введите телефон">
+      </label>
+      <label class="form__label footer__label">
+        <input type="text" name="text" class="input-text input-reset form__input" placeholder="Тема вопроса">
+      </label>
+      <textarea class="form__input form__textarea input-textarea" name="comment" id=""
+        placeholder="Введите сообщение"></textarea>
+      <button class="btn-reset form__btn" type="submit">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="footer__checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">Я согласен на обработку моих персональных данных</span>
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">Я согласен с политикой конфиденциальности</span>
+      </label>
+    </div>
+  </div>
+</footer>
+    <section class="copyright">
+  <div class="container copyright__container">
+    <a href="#" class="header__logo copyright__logo">
+      <img src="img/copyright-logo.svg" alt="Логотип">
+    </a>
+    <p class="copyright__descr">2020 © Все права защищены</p>
+    <div class="copyright__svg to-top">
+      <svg class="">
+        <use xlink:href="img/sprite.svg#arrow-right"></use>
+      </svg>
+    </div>
+    <div class="copyright--tell">
+      <a class="copyright--tell__link" href="tel:+79686582376">+7 968 658-23-76</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+</body>
+
+</html>
